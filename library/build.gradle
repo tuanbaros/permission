@@ -1,5 +1,31 @@
 apply plugin: 'com.android.library'
 
+ext {
+  bintrayRepo = 'permission'
+  bintrayName = 'permission'   // Has to be same as your library module name
+
+  publishedGroupId = 'com.simple.tuanbaros'
+  libraryName = 'Simple Permisson'
+  artifact = 'permission'     // Has to be same as your library module name
+
+  libraryDescription = 'Permission is an Android library that simplifies the process of requesting permissions at runtime (only applicable for Android M or higher).'
+
+  // Your github repo link
+  siteUrl = 'https://github.com/tuanbaros/permission.git'
+  gitUrl = 'https://github.com/tuanbaros/permission.git'
+  githubRepository= 'tuanbaros/permission'
+
+  libraryVersion = '1.0'
+
+  developerId = 'tuanbaros'
+  developerName = 'Tuan Nguyen Thanh'
+  developerEmail = 'tuanbaros@yahoo.com.vn'
+
+  licenseName = 'The Apache Software License, Version 2.0'
+  licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+  allLicenses = ["Apache-2.0"]
+}
+
 android {
   compileSdkVersion 26
   buildToolsVersion "26.0.0"
@@ -24,3 +50,6 @@ dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
   compile 'com.android.support:appcompat-v7:26.+'
 }
+
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nisrulz/JCenter/master/bintrayv1.gradle'

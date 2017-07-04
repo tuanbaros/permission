@@ -12,11 +12,20 @@ Usage
 
 ### Dependency
 
+Add to ``root/build.gradle``
+
+```groovy
+repositories {
+    jcenter()
+    maven { url 'https://dl.bintray.com/tuanbaros/permission' }
+  }
+```
+
 Include the library in your ``app/build.gradle``
 
 ```groovy
 dependencies{
-    compile project (':permission')
+    compile 'com.simple.tuanbaros:permission:1.0'
 }
 ```
 
