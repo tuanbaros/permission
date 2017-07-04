@@ -5,27 +5,18 @@ Permission is an Android library that simplifies the process of requesting permi
 Require
 -----
 
-* API 14 or higher
+* API 15 or higher
 
 Usage
 -----
 
 ### Dependency
 
-Add to ``root/build.gradle``
-
-```groovy
-repositories {
-    jcenter()
-    maven { url 'https://dl.bintray.com/tuanbaros/permission' }
-  }
-```
-
 Include the library in your ``app/build.gradle``
 
 ```groovy
 dependencies{
-    compile 'com.simple.tuanbaros:permission:1.0'
+    compile 'com.simple.tuanbaros:permission:1.2'
 }
 ```
 
@@ -50,6 +41,7 @@ dependencies{
 	@Override
     	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
         	    @NonNull int[] grantResults) {
+        	super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         	mPermission.onRequestPermissionsResult(requestCode, permissions, grantResults);
     	}
 ```

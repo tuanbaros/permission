@@ -1,9 +1,9 @@
 .idea
 
-/library/build
-/library/.idea
-/library/gradle
-/library/local.properties
+/permission/build
+/permission/.idea
+/permission/gradle
+/permission/local.properties
 
 /build
 /.idea
